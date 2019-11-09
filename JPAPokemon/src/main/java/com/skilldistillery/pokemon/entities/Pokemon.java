@@ -17,6 +17,24 @@ public class Pokemon {
 	private String weakness;
 	@Column(name="evolved_name")
 	private String evolvedName;
+	@Column(name="image_url")
+	private String imageUrl;
+
+	public String getWeakness() {
+		return weakness;
+	}
+
+	public void setWeakness(String weakness) {
+		this.weakness = weakness;
+	}
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
 
 	public int getId() {
 		return id;
@@ -52,6 +70,7 @@ public class Pokemon {
 		int result = 1;
 		result = prime * result + ((evolvedName == null) ? 0 : evolvedName.hashCode());
 		result = prime * result + id;
+		result = prime * result + ((imageUrl == null) ? 0 : imageUrl.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + ((type == null) ? 0 : type.hashCode());
 		result = prime * result + ((weakness == null) ? 0 : weakness.hashCode());
@@ -73,6 +92,11 @@ public class Pokemon {
 		} else if (!evolvedName.equals(other.evolvedName))
 			return false;
 		if (id != other.id)
+			return false;
+		if (imageUrl == null) {
+			if (other.imageUrl != null)
+				return false;
+		} else if (!imageUrl.equals(other.imageUrl))
 			return false;
 		if (name == null) {
 			if (other.name != null)
@@ -96,16 +120,18 @@ public class Pokemon {
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Pokemon [id=").append(id).append(", name=").append(name).append(", type=").append(type)
-				.append(", weaknesses=").append(weakness).append(", evolvedName=").append(evolvedName).append("]");
+				.append(", weakness=").append(weakness).append(", evolvedName=").append(evolvedName)
+				.append(", imageUrl=").append(imageUrl).append("]");
 		return builder.toString();
 	}
 
-	public Pokemon(String name, String type, String weakness, String evolvedName) {
+	public Pokemon(String name, String type, String weakness, String evolvedName, String imageUrl) {
 		super();
 		this.name = name;
 		this.type = type;
 		this.weakness = weakness;
 		this.evolvedName = evolvedName;
+		this.imageUrl = imageUrl;
 	}
 
 	public Pokemon() {

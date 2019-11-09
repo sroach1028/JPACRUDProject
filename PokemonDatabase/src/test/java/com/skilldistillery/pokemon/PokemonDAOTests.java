@@ -2,25 +2,23 @@ package com.skilldistillery.pokemon;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+import java.util.List;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.skilldistillery.pokemon.data.PokemonDAO;
+import com.skilldistillery.pokemon.data.PokemonDAOImpl;
 import com.skilldistillery.pokemon.entities.Pokemon;
 
 class PokemonDAOTests {
-	private PokemonDAO dao;
-	@BeforeAll
-	static void setUpBeforeClass() throws Exception {
-		
-	}
+	private PokemonDAOImpl dao = new PokemonDAOImpl();
+	private Pokemon testPoke;
 
-	@AfterAll
-	static void tearDownAfterClass() throws Exception {
-	}
 
 	@BeforeEach
 	void setUp() throws Exception {
@@ -28,11 +26,13 @@ class PokemonDAOTests {
 
 	@AfterEach
 	void tearDown() throws Exception {
+		testPoke = null;
 	}
 
 	@Test
 	void test() {
-		assertNotNull(dao.findPokemonById(1));
+		testPoke = dao.findPokemonById(3);
+		assertNotNull(testPoke);
 	}
 
 }
