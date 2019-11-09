@@ -42,7 +42,7 @@ class PokemonTest {
 	}
 
 	@Test
-	@DisplayName("test pokemon entity returns pikachu for id 1")
+	@DisplayName("test pokemon entity mapped to db_returns pikachu for id 1")
 	void test() {
 		assertNotNull(pokemon);
 		assertEquals("Pikachu", pokemon.getName());
