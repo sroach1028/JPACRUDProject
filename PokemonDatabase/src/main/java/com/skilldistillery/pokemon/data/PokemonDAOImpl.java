@@ -19,12 +19,7 @@ public class PokemonDAOImpl implements PokemonDAO {
 
 	@Override
 	public Pokemon findPokemonById(int id) {
-		Pokemon pokemon = em.find(Pokemon.class, id);
-		if (em.contains(Pokemon.class)) {
-			return pokemon;
-		}
-		else
-		return null;
+		return em.find(Pokemon.class, 1);
 	}
 
 	@Override

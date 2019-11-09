@@ -1,5 +1,6 @@
 package com.skilldistillery.pokemon.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +14,8 @@ public class Pokemon {
 	private int id;
 	private String name;
 	private String type;
-	private String weaknesses;
+	private String weakness;
+	@Column(name="evolved_name")
 	private String evolvedName;
 
 	public int getId() {
@@ -52,7 +54,7 @@ public class Pokemon {
 		result = prime * result + id;
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + ((type == null) ? 0 : type.hashCode());
-		result = prime * result + ((weaknesses == null) ? 0 : weaknesses.hashCode());
+		result = prime * result + ((weakness == null) ? 0 : weakness.hashCode());
 		return result;
 	}
 
@@ -82,10 +84,10 @@ public class Pokemon {
 				return false;
 		} else if (!type.equals(other.type))
 			return false;
-		if (weaknesses == null) {
-			if (other.weaknesses != null)
+		if (weakness == null) {
+			if (other.weakness != null)
 				return false;
-		} else if (!weaknesses.equals(other.weaknesses))
+		} else if (!weakness.equals(other.weakness))
 			return false;
 		return true;
 	}
@@ -94,15 +96,15 @@ public class Pokemon {
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Pokemon [id=").append(id).append(", name=").append(name).append(", type=").append(type)
-				.append(", weaknesses=").append(weaknesses).append(", evolvedName=").append(evolvedName).append("]");
+				.append(", weaknesses=").append(weakness).append(", evolvedName=").append(evolvedName).append("]");
 		return builder.toString();
 	}
 
-	public Pokemon(String name, String type, String weaknesses, String evolvedName) {
+	public Pokemon(String name, String type, String weakness, String evolvedName) {
 		super();
 		this.name = name;
 		this.type = type;
-		this.weaknesses = weaknesses;
+		this.weakness = weakness;
 		this.evolvedName = evolvedName;
 	}
 

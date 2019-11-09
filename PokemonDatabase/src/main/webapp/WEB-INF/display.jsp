@@ -4,20 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Pokemon Database Home</title>
+<title> ${pokemon.name } </title>
 <link href="show.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
-<h1>Pokemon Database</h1>
-<div>
-<form action = "getPokemon_id.do">
-<input type = "number" name = "id" min = "1"/>
-<input type="submit" class = "button" /> Search By Id</a>
-
-</form>
-
-
-</div>
+<p> ${pokemon.name } </p>
+<p> ${pokemon.type } </p>
 </body>
 </html>
