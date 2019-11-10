@@ -5,6 +5,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+body
+{
+background-color: light-gray;
+}
+</style>
 <meta charset="UTF-8">
 <title>${pokemon.name }</title>
 <link href="show.css" rel="stylesheet" type="text/css">

@@ -6,26 +6,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>Pokemon Database Home</title>
+<title>Insert title here</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link href="show.css" rel="stylesheet" type="text/css">
-<style>
-img
+
+<style> 
+body
 {
-size: 50%;
+background-image: url("https://www.freeiconspng.com/uploads/pokeball-transparent-image-15.png");
+background-repeat: no-repeat;
+background-size: 60%;
+background-position: center;
+background-color: gray;
+}
+nav
+{
+top: 100px;
 }
 </style>
 </head>
-<body id="indexbody">
 
+<body>
+	
     <!--Navbar-->
- 
-    <nav id="indexnav" class="navbar navbar-expand-lg" style="background-color: #e3f2fd;"">
+    <div class = "container">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
 
       <!-- Navbar brand -->
-      <a class="navbar-brand" href="">
-      <img src="https://cdn2.iconfinder.com/data/icons/gaming-color-icons/104/22-gaming-pokemon-pokeball-512.png"/>
-      </a>
+      <a class="navbar-brand" href="#">Logo</a>
 
       <!-- Collapse button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
@@ -34,43 +42,22 @@ size: 50%;
       </button>
 
       <!-- Collapsible content -->
-      <div class="collapse navbar-collapse" id="basicExampleNav">
+      
+          <form class="form-inline" action = "getPokemon_id.do">
+    <input class="form-control mr-sm-2" type="number" name = "id" min="1"placeholder="ID#" aria-label="Search ID">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
 
-        <!-- Links -->
-        <ul class="navbar-nav mr-auto">
-
-
-          <!-- Dropdown -->
-          <li class="nav-item dropdown" class="nav-item active">
-              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">Poke-Options</a>
-              <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink1">
-                <a class="dropdown-item" href="search.do">Search for Pokemon</a>
-                <a class="dropdown-item" href="create.do">Create Pokemon</a>
-                <a class="dropdown-item" href="getAllPokemon.do">Show All Pokemon</a>
-              </div>
-            </li>
-        </ul>
-		    <span class="navbar-text">
-      Pokemon Data Storage
-    </span>
       <!-- Collapsible content -->
 
     </nav>
+    </div>
+ </div>
     <!--/.Navbar-->
 
-
-<div class = "body">
-<h1>Pokemon Database</h1>
-    <footer class="footer">
-      <div class="container">
-        <span class="text-muted">Created by Shaun Roach @ Skill Distillery, Denver, CO</span>
-      </div>
-    </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-</div>
 </body>
 
 </html>

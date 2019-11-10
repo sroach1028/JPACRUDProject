@@ -1,5 +1,7 @@
 package com.skilldistillery.pokemon.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,6 +19,14 @@ public class PokemonController {
 	@RequestMapping(path="/")
 	public String toIndex() {
 		return "index";
+	}
+	@RequestMapping(path="search.do")
+	public String toSearch() {
+		return "search";
+	}
+	@RequestMapping(path="create.do")
+	public String toCreate() {
+		return "create";
 	}
 	
 	@RequestMapping(path="getPokemon_id.do")
@@ -48,6 +58,13 @@ public class PokemonController {
 		System.out.println(updatedVersion);
 		model.addAttribute("pokemon", pokeDao.updatePokemon(id, updatedVersion));
 		return "display";
+	}
+	
+	@RequestMapping(path="getAllPokemon.do")
+	public String getAllPokemon(Model model) {
+		List<Pokemon> allPokemon = pokeDao.showAllPokemon();
+		model.addAttribute("pokeList", allPokemon);
+		return "display_all";
 	}
 	
 }

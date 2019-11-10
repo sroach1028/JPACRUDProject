@@ -78,4 +78,6 @@ public class PokemonDAOImpl implements PokemonDAO {
 		return managed;
 	}
 
+
+
 }
