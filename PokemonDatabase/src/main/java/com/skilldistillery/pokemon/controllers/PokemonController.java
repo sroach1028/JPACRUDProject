@@ -16,7 +16,7 @@ public class PokemonController {
 	@Autowired
 	private PokemonDAO pokeDao;
 	
-	@RequestMapping(path="/")
+	@RequestMapping(path= {"/", "goHome.do"})
 	public String toIndex() {
 		return "index";
 	}

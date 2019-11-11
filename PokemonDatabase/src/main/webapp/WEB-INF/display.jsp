@@ -43,7 +43,7 @@ Unable to locate Pokemon with that ID
 	<br>
 
 	<div>
-		<a href="/" class="button">Home</a>
+		<a href="goHome.do" class="button">Home</a>
 	</div>
 </body>
 </html>
