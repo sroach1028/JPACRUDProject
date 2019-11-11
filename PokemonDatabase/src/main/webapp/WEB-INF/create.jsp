@@ -9,11 +9,16 @@
 <body>
 <p>Create Pokemon</p>
 <form action = "createPokemon.do" method = "Post">
-<input type = "text" name = "name" value="Enter Name"/>
-<input type = "text" name = "type" value="Enter Type"/>
-<input type = "text" name = "weakness" value="Enter Weakness"/>
-<input type = "text" name = "evolvedName" value="Enter Evolved Name"/>
-<input type = "text" name = "imageUrl" value="Enter Image Address"/>
+<input type = "text" name = "name" placeholder="Enter Name"/>
+<select name="type" multiple>
+  <option value="Electric">Electric</option>
+  <option value="Fire">Fire</option>
+  <option value="Water">Water</option>
+  <option value="Grass">Grass</option>
+</select>
+<input type = "text" name = "weakness" placeholder="Enter Weakness"/>
+<input type = "text" name = "evolvedName" placeholder="Enter Evolved Name"/>
+<input type = "text" name = "imageUrl" placeholder="Enter Image Address"/>
 <input type="submit" class = "button" />
 </form>
 <br>

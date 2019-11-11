@@ -8,7 +8,12 @@
 <style>
 body
 {
-background-color: light-gray;
+background-color: gray;
+}
+p
+{
+color: white;
+font-family: fantasy;
 }
 </style>
 <meta charset="UTF-8">
@@ -17,10 +22,12 @@ background-color: light-gray;
 </head>
 <body>
 <c:if test="${! empty pokemon}">
-	<p>${pokemon.id }</p>
-				<p>${pokemon.name }</p>
-				<p>${pokemon.type }</p>
 <img src= ${pokemon.imageUrl } >
+	<p>${pokemon.id }</p>
+				<p>Name: ${pokemon.name }</p>
+				<p>Type: ${pokemon.type }</p>
+				<p>Weakness(es): ${pokemon.weakness }</p>
+				<p>Evolves to: ${pokemon.evolvedName }</p>
 <form action="deletePokemon.do" method="POST">
 	<input type="hidden" name="id" value=${pokemon.id } /> <input
 	type="submit" class="button" value="Delete Pokemon" />

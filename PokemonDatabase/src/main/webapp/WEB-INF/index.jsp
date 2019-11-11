@@ -14,6 +14,7 @@ img
 {
 size: 50%;
 }
+
 </style>
 </head>
 <body id="indexbody">
